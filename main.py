@@ -81,14 +81,14 @@ weights = np.random.rand(784, 10) - 0.5
 
 training_error = 1
 
-n = 50
+n = 60000
 
 #training
 
 training_datas = load_idx3_to_np('train-images.idx3-ubyte')
 training_classes = load_idx1_to_np('train-labels.idx1-ubyte')
 
-while training_error > tolerance:
+while training_error > tolerance and epoch < 500:
 
     #increment epoch counter
     epoch += 1
